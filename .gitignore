@@ -46,6 +46,9 @@ dist/
 *.tmp
 *.temp
 
+# Playwright MCP files
+.playwright-mcp/
+
 # Package lock files (optional - commit if you need consistent installs)
 # package-lock.json
 # yarn.lock
