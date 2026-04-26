@@ -1,0 +1,201 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Page Non Trouvée">
+  <section class="not-found">
+    <div class="not-found-content">
+      <h1 class="not-found-title">404</h1>
+      <h2 class="not-found-subtitle">PAGE NON TROUVÉE</h2>
+      <p class="not-found-text">
+        Désolé, la page que vous recherchez n'existe pas ou a été déplacée.
+      </p>
+      <div class="not-found-actions">
+        <a href="/" class="btn-primary">RETOURNER À L'ACCUEIL</a>
+        <a href="/contact" class="btn-secondary">NOUS CONTACTER</a>
+      </div>
+    </div>
+    <div class="not-found-image">
+      <div class="fries-container">
+        <div class="fry fry-1"></div>
+        <div class="fry fry-2"></div>
+        <div class="fry fry-3"></div>
+        <div class="fry fry-4"></div>
+        <div class="fry fry-5"></div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .not-found {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: #F4EFE6;
+    gap: 4rem;
+  }
+
+  .not-found-content {
+    text-align: center;
+    max-width: 500px;
+    flex: 1;
+  }
+
+  .not-found-title {
+    font-family: 'Titan One', var(--font-serif), system-ui, serif;
+    font-size: clamp(8rem, 15vw, 12rem);
+    font-weight: 700;
+    color: #111D3D;
+    line-height: 1;
+    margin: 0 0 1rem;
+  }
+
+  .not-found-subtitle {
+    font-family: var(--font-sans);
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #1A1A1A;
+    margin: 0 0 1.5rem;
+  }
+
+  .not-found-text {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #1A1A1A;
+    opacity: 0.85;
+    margin-bottom: 3rem;
+  }
+
+  .not-found-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #111D3D;
+    border: 2px solid #111D3D;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: transparent;
+    color: #111D3D;
+  }
+
+  .btn-secondary {
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #111D3D;
+    background-color: transparent;
+    border: 2px solid #111D3D;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .btn-secondary:hover {
+    background-color: #111D3D;
+    color: #FFFFFF;
+  }
+
+  .not-found-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+  }
+
+  .fries-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+
+  .fry {
+    position: absolute;
+    width: 20px;
+    height: 80px;
+    background: linear-gradient(135deg, #E8C547 0%, #D4A54A 50%, #C4953E 100%);
+    border-radius: 10px;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .fry-1 {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-20deg);
+    animation-delay: 0s;
+  }
+
+  .fry-2 {
+    top: 40px;
+    left: 30%;
+    transform: rotate(-45deg);
+    animation-delay: 0.3s;
+  }
+
+  .fry-3 {
+    top: 40px;
+    left: 70%;
+    transform: rotate(45deg);
+    animation-delay: 0.6s;
+  }
+
+  .fry-4 {
+    top: 80px;
+    left: 40%;
+    transform: rotate(15deg);
+    animation-delay: 0.9s;
+  }
+
+  .fry-5 {
+    top: 80px;
+    left: 60%;
+    transform: rotate(-15deg);
+    animation-delay: 1.2s;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .not-found {
+      flex-direction: column;
+      gap: 2rem;
+      padding: 1rem;
+    }
+
+    .not-found-content,
+    .not-found-image {
+      max-width: 100%;
+    }
+  }
+</style>

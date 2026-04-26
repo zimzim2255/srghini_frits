@@ -1,0 +1,555 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+// Product data based on what's shown in the produits page
+export async function getStaticPaths() {
+  const fritesProducts = [
+    {
+      slug: 'frites-with-sauce',
+      name: 'FRITES WITH SAUCE',
+      category: 'frites',
+      image: 'https://goldenfries.com.au/wp-content/uploads/2024/09/10mm-Fries-Images-%E2%80%93-5-1.png',
+      description: 'Nos frites spéciales 10mm, coupées à la perfection et frites dans un mélange d\'huiles végétales premium. Une texture croustillante à l\'extérieur, moelleuse à l\'intérieur, accompagnée de notre sélection de sauces artisanales.',
+      details: {
+        size: '10mm',
+        type: 'Frites spéciales',
+        preparation: 'Frites fraîches coupées à la main',
+        ingredients: 'Pommes de terre belges, huile de colza, huile de tournesol, huile de maïs',
+        allergens: 'Sans gluten',
+        origin: 'Pommes de terre belges de qualité supérieure',
+        cooking: 'Frites dans un mélange d\'huiles végétales'
+      },
+      nutrition: '100% naturel, sans additifs artificiels',
+      pairings: ['Classic Mayo', 'Truffle Sauce', 'Andalouse']
+    },
+    {
+      slug: 'veggie-chili-con-queso',
+      name: 'VEGGIE CHILI CON QUESO',
+      category: 'frites',
+      image: 'https://goldenfries.com.au/wp-content/uploads/2024/09/13mm-Fries-Images-–-6-1.png',
+      description: 'Des frites 13mm épaisses et robustes, parfaitement adaptées pour supporter notre délicieux chili con queso végétarien et notre cheddar fondant. Un plat complet qui ravira les végétariens et les amateurs de saveurs intenses.',
+      details: {
+        size: '13mm',
+        type: 'Frites épaisses',
+        preparation: 'Frites fraîches épaisses',
+        ingredients: 'Pommes de terre belges, huile de colza, huile de tournesol, huile de maïs, chili végétarien, queso fondu',
+        allergens: 'Sans gluten, contient produits laitiers',
+        origin: 'Recette inspirée des saveurs Tex-Mex',
+        cooking: 'Frites dans un mélange d\'huiles végétales'
+      },
+      nutrition: 'Riche en protéines végétales, source de fibres',
+      pairings: ['Bearnaise', 'Basil Mayo']
+    },
+    {
+      slug: 'parmesan-basil',
+      name: 'PARMESAN & BASIL',
+      category: 'frites',
+      image: 'https://goldenfries.com.au/wp-content/uploads/2024/09/GF_7mm_001c.png',
+      description: 'Frites fines et croustillantes de 7mm, parsemées de parmesan authentique et de basilic frais. Une combinaison italienne classique qui sublime la saveur naturelle de nos pommes de terre belges. Sans gluten, parfait pour les personnes allergiques.',
+      details: {
+        size: '7mm',
+        type: 'Frites fines',
+        preparation: 'Frites croustillantes au parmesan',
+        ingredients: 'Pommes de terre belges, huile de colza, huile de tournesol, huile de maïs, parmesan AOP, basilic frais',
+        allergens: 'Sans gluten, contient lactose',
+        origin: 'Inspiration italienne authentique',
+        cooking: 'Frites dans un mélange d\'huiles végétales'
+      },
+      nutrition: 'Sans gluten, faible teneur en matières grasses',
+      pairings: ['Classic Mayo', 'Truffle']
+    },
+    {
+      slug: 'indo-peanut',
+      name: 'INDO PEANUT',
+      category: 'frites',
+      image: 'https://goldenfries.com.au/wp-content/uploads/2024/09/Steak-Fries-Images-–-8-1.png',
+      description: 'Steak fries épaisses et charnues, nappées d\'une sauce aux cacahuètes crémeuse épicée à la façon indonésienne. Une explosion de saveurs asiatiques qui réveille les papilles, parfaite pour les amateurs de cuisine du monde.',
+      details: {
+        size: 'Steak Fries (format premium)',
+        type: 'Frites extra-épaisses',
+        preparation: 'Frites steak coupées à la main',
+        ingredients: 'Pommes de terre belges, huile de colza, huile de tournesol, huile de maïs, cacahuètes, sauce soja, épices indonésiennes',
+        allergens: 'Sans gluten, contient arachides, soja',
+        origin: 'Saveurs traditionnelles indonésiennes',
+        cooking: 'Frites dans un mélange d\'huiles végétales'
+      },
+      nutrition: 'Riches en protéines, source d\'énergie',
+      pairings: ['Truffle', 'Basil Mayo']
+    },
+    {
+      slug: 'spicy-royal-rendang',
+      name: 'SPICY ROYAL RENDANG',
+      category: 'frites',
+      image: 'https://goldenfries.com.au/wp-content/uploads/2024/09/15mm-Fries-Images-–-7-1.png',
+      description: 'Frites généreuses de 15mm accompagnées d\'un rendang royal épicé, mijoté lentement selon la recette traditionnelle malaisienne. Une viande tendre et fondante dans une sauce riche et parfumée qui transforme une simple frite en expérience culinaire exceptionnelle.',
+      details: {
+        size: '15mm',
+        type: 'Frites extra-larges',
+        preparation: 'Frites généreuses maison',
+        ingredients: 'Pommes de terre belges, huile de colza, huile de tournesol, huile de maïs, bœuf premium, lait de coco, épices malaisiennes (galanga, citronnelle, curcuma)',
+        allergens: 'Sans gluten, contient lait de coco',
+        origin: 'Recette traditionnelle malaisienne',
+        cooking: 'Frites dans un mélange d\'huiles végétales'
+      },
+      nutrition: 'Riche en protéines, sans additifs',
+      pairings: ['Classic Mayo', 'Andalouse', 'Bearnaise']
+    }
+  ];
+
+  const sauceProducts = [
+    {
+      slug: 'classic-mayo',
+      name: 'CLASSIC MAYO',
+      category: 'sauce',
+      image: 'https://www.luxfries.com/assets/images/luxfries-3-115256-360x_.jpg',
+      description: 'La mayonnaise classique par excellence, préparée en petites quantités selon une recette traditionnelle. Une texture crémeuse et onctueuse qui accompagne parfaitement toutes nos spécialités de frites. Fabriquée sans additifs artificiels.',
+      details: {
+        type: 'Sauce traditionnelle',
+        preparation: 'Fabriquée en petites quantités',
+        ingredients: 'Œufs frais, huile de colza, vinaigre, moutarde, sel, poivre',
+        allergens: 'Contient ŒUF, MOUTARDE',
+        origin: 'Recette artisanale maison',
+        conservation: 'Conservée dans des pots en céramique spéciaux'
+      },
+      nutrition: 'Sans additifs artificiels, 100% naturel',
+      pairings: ['Toutes les frites', 'Indo Peanut', 'Classic Fries']
+    },
+    {
+      slug: 'truffle',
+      name: 'TRUFFLE',
+      category: 'sauce',
+      image: 'https://www.luxfries.com/assets/images/luxfries-2-115329-360x_.jpg',
+      description: 'Une sauce luxueuse à la truffe noire qui élève vos frites à un niveau supérieur. L\'arôme intense et terreux de la truffe se marie parfaitement avec la saveur naturelle de nos pommes de terre belges pour une expérience gastronomique inoubliable.',
+      details: {
+        type: 'Sauce premium',
+        preparation: 'Infusée à la truffe noire',
+        ingredients: 'Base mayonnaise, truffe noire (Tuber melanosporum), huile de truffe, aromates',
+        allergens: 'Contient ŒUF, MOUTARDE',
+        origin: 'Truffes françaises sélectionnées',
+        conservation: 'Conservée dans des pots en céramique spéciaux'
+      },
+      nutrition: '100% ingrédients naturels de qualité',
+      pairings: ['Parmesan & Basil', 'Indo Peanut', 'Frites classiques']
+    },
+    {
+      slug: 'andalouse',
+      name: 'ANDALOUSE',
+      category: 'sauce',
+      image: 'https://www.luxfries.com/assets/images/luxfries-1-115329-360x_.jpg',
+      description: 'La sauce incontournable aux saveurs méditerranéennes. Une combinaison parfaite de poivrons rouges grillés, de tomates et d\'épices douces qui apporte une touche de fraîcheur et de légèreté à vos frites. La préférée de beaucoup de nos clients.',
+      details: {
+        type: 'Sauce méditerranéenne',
+        preparation: 'Mélange de légumes grillés',
+        ingredients: 'Poivrons rouges, tomates, huile de tournesol, vinaigre, épices douces, sel',
+        allergens: 'Peut contenir des traces de céleri',
+        origin: 'Inspiration espagnole authentique',
+        conservation: 'Conservée dans des pots en céramique spéciaux'
+      },
+      nutrition: 'Faible en calories, 100% naturel',
+      pairings: ['Toutes les frites', 'Spicy Royal Rendang', 'Veggie Chili']
+    },
+    {
+      slug: 'bearnaise',
+      name: 'BEARNAISE',
+      category: 'sauce',
+      image: 'https://www.luxfries.com/assets/images/luxfries-3-115425-360x360.jpg',
+      description: 'Une sauce riche et élégante à la française, préparée avec du vinaigre de vin blanc, des échalotes et des herbes fraîches. Une saveur acidulée et herbacée qui rehausse magnifiquement le goût de nos pommes de terre belges. Parfaite pour les amateurs de saveurs raffinées.',
+      details: {
+        type: 'Sauce gastronomique',
+        preparation: 'Émulsionnée à froid',
+        ingredients: 'Œufs frais, beurre, vinaigre de vin blanc, échalotes, estragon, cerfeuil, poivre',
+        allergens: 'Contient ŒUF, LAIT',
+        origin: 'Recette traditionnelle française',
+        conservation: 'Conservée dans des pots en céramique spéciaux'
+      },
+      nutrition: 'Sans additifs, ingrédients frais',
+      pairings: ['Indo Peanut', 'Veggie Chili', 'Steak Fries']
+    },
+    {
+      slug: 'basil-mayo',
+      name: 'BASIL MAYO',
+      category: 'sauce',
+      image: 'https://www.luxfries.com/assets/images/luxfries-2-115424-360x360.jpg',
+      description: 'Une mayonnaise maison rehaussée de basilic frais, apportant une note herbacée et rafraîchissante. L\'équilibre parfait entre la richesse crémeuse de la mayonnaise et la vivacité du basilic frais. Idéale pour l\'été ou pour apporter une touche de légèreté à vos repas.',
+      details: {
+        type: 'Sauce fraîche',
+        preparation: 'Fabriquée avec du basilic frais',
+        ingredients: 'Base mayonnaise, basilic frais, huile d\'olive, sel, poivre',
+        allergens: 'Contient ŒUF',
+        origin: 'Herbes fraîches locales',
+        conservation: 'Conservée dans des pots en céramique spéciaux'
+      },
+      nutrition: '100% naturel, herbes fraîches',
+      pairings: ['Toutes les frites', 'Veggie Chili', 'Parmesan & Basil']
+    }
+  ];
+
+  const allProducts = [...fritesProducts, ...sauceProducts];
+
+  return allProducts.map((product) => ({
+    params: { product: product.slug },
+    props: { product }
+  }));
+}
+
+const { product } = Astro.props;
+---
+
+<Layout title={product.name + ' | Nos Produits'}>
+  <section class="product-hero">
+    <div class="product-hero-background" style={{ backgroundImage: `url(${product.image})` }}></div>
+    <div class="product-hero-overlay"></div>
+    <div class="product-hero-content">
+      <span class="product-category">{product.category === 'frites' ? 'FRITES' : 'SAUCES'}</span>
+      <h1 class="product-title">{product.name}</h1>
+      <p class="product-description">{product.description}</p>
+    </div>
+  </section>
+
+  <section class="product-details-section">
+    <div class="product-details-container">
+      <div class="product-image-large">
+        <img src={product.image} alt={product.name} />
+      </div>
+      
+      <div class="product-info-grid">
+        <div class="product-description-full">
+          <h2>Description</h2>
+          <p>{product.description}</p>
+          <p class="nutrition-info">{product.nutrition}</p>
+        </div>
+
+        <div class="product-specs">
+          <h2>Spécifications</h2>
+          <ul class="specs-list">
+            {Object.entries(product.details).map(([key, value]) => (
+              <li class="spec-item">
+                <span class="spec-label">{key === 'size' ? 'Taille' : 
+                    key === 'type' ? 'Type' :
+                    key === 'preparation' ? 'Préparation' :
+                    key === 'ingredients' ? 'Ingrédients' :
+                    key === 'allergens' ? 'Allergènes' :
+                    key === 'origin' ? 'Origine' :
+                    key === 'conservation' ? 'Conservation' :
+                    key === 'cooking' ? 'Cuisson' : key}</span>
+                <span class="spec-value">{value}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {product.pairings && product.pairings.length > 0 && (
+          <div class="product-pairings">
+            <h2>Accompagnements recommandés</h2>
+            <div class="pairings-list">
+              {product.pairings.map((pairing) => (
+                <span class="pairing-tag">{pairing}</span>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <section class="ingredients-section">
+    <div class="ingredients-container">
+      <h2>Ingrédients Naturels</h2>
+      <p class="ingredients-description">
+        Tous nos produits sont fabriqués sans additifs artificiels. Seuls les ingrédients les plus frais sont utilisés pour nos spécialités et nos sauces. 
+        Rien d'artificiel, uniquement des ingrédients naturels. Toutes nos sauces sont faites maison et conservées dans des pots en céramique 
+        spécialement conçus pour préserver toute leur saveur.
+      </p>
+      <div class="quality-badges">
+        <span class="badge">Sans additifs artificiels</span>
+        <span class="badge">100% naturel</span>
+        <span class="badge">Fait maison</span>
+        <span class="badge">Ingrédients frais</span>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .product-hero {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .product-hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+  }
+
+  .product-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.7) 100%);
+    z-index: 2;
+  }
+
+  .product-hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    max-width: 900px;
+    padding: 2rem;
+    color: #F4F1EA;
+  }
+
+  .product-category {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #F4EFE6;
+    background: rgba(139, 0, 0, 0.6);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+  }
+
+  .product-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 6vw, 4rem);
+    font-weight: 700;
+    color: #F4F1EA;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: 0 0 1.5rem 0;
+  }
+
+  .product-description {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #F4F1EA;
+    opacity: 0.95;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .product-details-section {
+    background: #F9F6F0;
+    padding: 4rem 2rem;
+  }
+
+  .product-details-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .product-image-large {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .product-image-large img {
+    max-width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .product-info-grid {
+    display: grid;
+    gap: 3rem;
+  }
+
+  .product-description-full h2,
+  .product-specs h2,
+  .product-pairings h2,
+  .ingredients-section h2 {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    color: #1A1A1A;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .product-description-full p {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+
+  .nutrition-info {
+    font-style: italic;
+    color: #8B0000;
+    font-weight: 600;
+  }
+
+  .specs-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .spec-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem 0;
+    border-bottom: 1px solid #E0D8C8;
+    flex-wrap: wrap;
+  }
+
+  .spec-label {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    flex: 1;
+    min-width: 150px;
+  }
+
+  .spec-value {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    color: #1A1A1A;
+    flex: 2;
+    min-width: 200px;
+  }
+
+  .product-pairings {
+    background: #F4F1EA;
+    padding: 2rem;
+    border-radius: 8px;
+  }
+
+  .pairings-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .pairing-tag {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #8B0000;
+    background: #fff;
+    border: 2px solid #8B0000;
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+  }
+
+  .ingredients-section {
+    background: #fff;
+    padding: 4rem 2rem;
+    border-top: 1px solid #E0D8C8;
+  }
+
+  .ingredients-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .ingredients-description {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+  }
+
+  .quality-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .badge {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #F4F1EA;
+    background: #8B0000;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+  }
+
+  @media (max-width: 768px) {
+    .product-hero {
+      min-height: 60vh;
+    }
+
+    .product-hero-content {
+      padding: 1.5rem;
+    }
+
+    .product-title {
+      font-size: 2rem;
+    }
+
+    .product-description {
+      font-size: 1rem;
+    }
+
+    .product-details-section {
+      padding: 2rem 1.5rem;
+    }
+
+    .spec-item {
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .spec-label,
+    .spec-value {
+      min-width: 100%;
+    }
+
+    .ingredients-section {
+      padding: 2rem 1.5rem;
+    }
+
+    .quality-badges {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
+
+<script>
+  // Smooth scroll for any anchor links
+  document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const target = document.getElementById(targetId);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  });
+</script>

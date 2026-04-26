@@ -1,0 +1,206 @@
+---
+---
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-logo">
+      <img src="/assets/logos/delivrables/PNG/full-colors.png" alt="Frites Atelier" class="logo-img" />
+      <span class="logo-tagline">AMSTERDAM</span>
+    </div>
+
+    <div class="footer-links">
+      <div class="link-column">
+        <a href="/">ACCUEIL</a>
+        <a href="/histoire">NOTRE HISTOIRE</a>
+        <a href="/produits">NOS PRODUITS</a>
+        <a href="/locations">NOS ATELIERS</a>
+        <a href="/contact">CONTACTEZ-NOUS</a>
+      </div>
+
+      <div class="link-column">
+        <a href="/partenaires">PARTENARIATS</a>
+        <a href="/wholesale">WHOLESALE</a>
+        <a href="/locations">NOS ATELIERS</a>
+      </div>
+
+      <div class="link-column">
+        <a href="/employment">OFFRES D'EMPLOI</a>
+        <a href="#">PRESSE</a>
+        <a href="#">ACTUALITÉS</a>
+      </div>
+
+      <div class="link-column">
+        <a href="#">INSTAGRAM</a>
+        <a href="#">FACEBOOK</a>
+        <a href="#">LINKEDIN</a>
+        <a href="#">TIKTOK</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-legal">
+      <span>&copy; 2026 FRITES ATELIER</span>
+      <span class="separator">•</span>
+      <span>CREDITS WEB</span>
+    </div>
+    <div class="footer-legal">
+      <a href="#">CONDITIONS GÉNÉRALES D'UTILISATION</a>
+      <span class="separator">•</span>
+      <a href="#">POLITIQUE DE CONFIDENTIALITÉ</a>
+      <span class="separator">•</span>
+      <a href="#">POLITIQUE EN MATIÈRE DE COOKIES</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    width: 100%;
+    margin-top: auto;
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 5rem 4rem;
+    background-color: #F4EFE6;
+    gap: 4rem;
+  }
+
+  .footer-logo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  .logo-img {
+    width: 180px;
+    height: auto;
+  }
+
+  .logo-tagline {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #1A1A1A;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 4rem;
+  }
+
+  .link-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .link-column a {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #1A1A1A;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .link-column a:hover {
+    opacity: 0.6;
+  }
+
+  .footer-bottom {
+    background-color: #D32F2F;
+    padding: 1.5rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-legal {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .footer-legal a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-legal a:hover {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .separator {
+    opacity: 0.4;
+  }
+
+  @media (max-width: 1024px) {
+    .footer-top {
+      flex-direction: column;
+      padding: 4rem 2rem;
+      gap: 3rem;
+    }
+
+    .footer-links {
+      flex-wrap: wrap;
+      gap: 2.5rem;
+    }
+
+    .footer-bottom {
+      padding: 1.5rem 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer-top {
+      padding: 3rem 1.5rem;
+    }
+
+    .footer-links {
+      gap: 2rem;
+    }
+
+    .link-column {
+      min-width: 120px;
+    }
+
+    .link-column a {
+      font-size: 0.75rem;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1.5rem;
+    }
+
+    .footer-legal {
+      font-size: 0.6rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .logo-img {
+      width: 140px;
+    }
+  }
+</style>

@@ -1,0 +1,311 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Locations">
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-label">NOS ATELIERS</span>
+      <h1 class="hero-title">À VOTRE SERVICE</h1>
+      <p class="hero-body">
+        Découvrez l'expérience Frites Atelier dans nos magnifiques Ateliers. Chaque lieu allie excellence gastronomique et luxe ordinaire; un espace méticuleusement conçu pour vous immerger dans l'atmosphère qui nous caractérise.
+      </p>
+      <a href="#locations" class="hero-cta">FAITES DEFILER POUR DECOUVRIR</a>
+    </div>
+  </section>
+
+  <section class="location-selector" id="locations">
+    <span class="selector-label">TROUVEZ VOTRE ATELIER</span>
+    <div class="city-list">
+      <div class="city-item" data-city="anvers">
+        <h2 class="city-name city-large">ANVERS</h2>
+        <div class="side-images">
+          <img src="https://cdn.prod.website-files.com/68dd3f108c36a61ef80ede4c/68dd3f108c36a61ef80edec2_brussel_1.avif" class="img-left" alt="Anvers Exterior" />
+          <img src="https://goldenfries.com.au/wp-content/uploads/2024/08/GF_BallaratFarm_030.jpg" class="img-right" alt="Anvers Interior" />
+        </div>
+      </div>
+      <div class="city-item" data-city="bruxelles">
+        <h2 class="city-name">BRUXELLES</h2>
+        <div class="side-images">
+          <img src="https://cdn.prod.website-files.com/68dd3f108c36a61ef80ede4c/68dd3f108c36a61ef80edec7_lifestyle_3.avif" class="img-left" alt="Bruxelles Exterior" />
+          <img src="https://cdn.prod.website-files.com/68dd3f108c36a61ef80ede4c/68dd3f108c36a61ef80edec8_lifestyle_1.avif" class="img-right" alt="Bruxelles Interior" />
+        </div>
+      </div>
+      <div class="city-item" data-city="gand">
+        <h2 class="city-name">GAND</h2>
+        <div class="side-images">
+          <img src="https://cdn.prod.website-files.com/68dd3f108c36a61ef80ede4c/68dd3f108c36a61ef80edec2_brussel_1.avif" class="img-left" alt="Gand Exterior" />
+          <img src="https://goldenfries.com.au/wp-content/uploads/2024/08/GF_BallaratFarm_030.jpg" class="img-right" alt="Gand Interior" />
+        </div>
+      </div>
+      <div class="city-item" data-city="londres">
+        <h2 class="city-name">LONDRES</h2>
+        <div class="side-images">
+          <img src="https://cdn.prod.website-files.com/68dd3f108c36a61ef80ede4c/68dd3f108c36a61ef80edec7_lifestyle_3.avif" class="img-left" alt="Londres Exterior" />
+          <img src="https://cdn.prod.website-files.com/68dd3f108c36a61ef80ede4c/68dd3f108c36a61ef80edec8_lifestyle_1.avif" class="img-right" alt="Londres Interior" />
+        </div>
+      </div>
+      <div class="city-item" data-city="roosendaal">
+        <h2 class="city-name city-large">ROOSENDAAL</h2>
+        <div class="side-images">
+          <img src="https://cdn.prod.website-files.com/68dd3f108c36a61ef80ede4c/68dd3f108c36a61ef80edec2_brussel_1.avif" class="img-left" alt="Roosendaal Exterior" />
+          <img src="https://goldenfries.com.au/wp-content/uploads/2024/08/GF_BallaratFarm_030.jpg" class="img-right" alt="Roosendaal Interior" />
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://goldenfries.com.au/wp-content/uploads/2024/08/GF_BallaratFarm_030.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 600px;
+    padding: 2rem;
+  }
+
+  .hero-label {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #F4F1EA;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-title {
+    display: block;
+    font-family: 'Titan One', var(--font-serif), system-ui, serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #F4F1EA;
+    line-height: 1;
+    margin-bottom: 2rem;
+  }
+
+  .hero-body {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #F4F1EA;
+    opacity: 0.9;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-cta {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 1rem 2.5rem;
+    border: 1px solid #FFFFFF;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    background: transparent;
+  }
+
+  .hero-cta:hover {
+    background-color: #FFFFFF;
+    color: #1A1A1A;
+  }
+
+  @media (max-width: 768px) {
+    .hero-content {
+      padding: 1.5rem;
+    }
+
+    .hero-body {
+      font-size: 0.9rem;
+    }
+
+    .hero-cta {
+      padding: 0.875rem 2rem;
+      font-size: 0.625rem;
+    }
+  }
+
+  .location-selector {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #F4EFE6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 2rem;
+    box-sizing: border-box;
+  }
+
+  .selector-label {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #1A1A1A;
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  .city-list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .city-item {
+    position: relative;
+    cursor: pointer;
+    padding: 0.5rem 2rem;
+  }
+
+  .city-name {
+    font-family: 'Titan One', var(--font-serif), system-ui, serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #1A1A1A;
+    line-height: 1;
+    margin: 0;
+    transition: color 0.4s ease, opacity 0.4s ease;
+    position: relative;
+    z-index: 2;
+  }
+
+  .city-large {
+    font-size: clamp(3rem, 7vw, 5.5rem);
+  }
+
+  .side-images {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .side-images img {
+    position: absolute;
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .side-images .img-left {
+    left: -320px;
+  }
+
+  .side-images .img-right {
+    right: -320px;
+  }
+
+  .city-list:hover .city-item:not(:hover) .city-name {
+    color: #C9C2B5;
+    opacity: 0.5;
+  }
+
+  .city-item:hover .city-name {
+    color: #1A1A1A;
+    opacity: 1;
+  }
+
+  .city-item:hover .side-images img {
+    opacity: 1;
+  }
+
+  @media (max-width: 1200px) {
+    .side-images img {
+      width: 220px;
+      height: 160px;
+    }
+
+    .side-images .img-left {
+      left: -260px;
+    }
+
+    .side-images .img-right {
+      right: -260px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .location-selector {
+      padding: 4rem 1.5rem;
+    }
+
+    .selector-label {
+      margin-bottom: 3rem;
+    }
+
+    .city-list {
+      gap: 1rem;
+    }
+
+    .side-images {
+      display: none;
+    }
+
+    .city-list:hover .city-item:not(:hover) .city-name {
+      color: #1A1A1A;
+      opacity: 1;
+    }
+
+    .city-item:active .city-name {
+      color: #C9C2B5;
+    }
+  }
+</style>
