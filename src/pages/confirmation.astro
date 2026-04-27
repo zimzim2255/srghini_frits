@@ -1,0 +1,236 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Confirmation">
+  <section class="confirmation-container">
+    <div class="confirmation-content">
+      <div class="checkmark">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+
+      <h1 class="confirmation-title">MERCI!</h1>
+      
+      <p class="confirmation-message">
+        Votre message a été reçu avec succès. Nous avons bien noté vos coordonnées et reviendrons vers vous très bientôt.
+      </p>
+
+      <div class="confirmation-details">
+        <p>
+          <strong>Nous vous contacterons:</strong><br>
+          Par téléphone ou par email dans les prochaines 24 à 48 heures.
+        </p>
+      </div>
+
+      <div class="confirmation-info">
+        <p>
+          Si vous avez des questions urgentes, n'hésitez pas à nous appeler directement:<br>
+          <a href="tel:+212665951321" class="phone-link">+212 665 951 321</a>
+        </p>
+      </div>
+
+      <div class="button-group">
+        <a href="/" class="btn btn-primary">Retour à l'accueil</a>
+        <a href="/contact" class="btn btn-secondary">Nous contacter à nouveau</a>
+      </div>
+
+      <p class="confirmation-footer">
+        Merci de votre confiance en Serghini Frites!
+      </p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .confirmation-container {
+    background: linear-gradient(135deg, #F4EFE6 0%, #f9f6f0 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .confirmation-content {
+    text-align: center;
+    max-width: 600px;
+    animation: slideIn 0.6s ease-out;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .checkmark {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 2rem;
+    background-color: #d32f2f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: scaleIn 0.5s ease-out;
+  }
+
+  @keyframes scaleIn {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  .checkmark svg {
+    width: 60px;
+    height: 60px;
+    color: white;
+  }
+
+  .confirmation-title {
+    font-family: 'Titan One', var(--font-serif), system-ui, serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  .confirmation-message {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #1A1A1A;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+  }
+
+  .confirmation-details {
+    background-color: rgba(211, 47, 47, 0.08);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border-left: 4px solid #d32f2f;
+  }
+
+  .confirmation-details p {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    color: #1A1A1A;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .confirmation-info {
+    margin-bottom: 2.5rem;
+    font-family: var(--font-serif);
+    font-size: 0.95rem;
+    color: #1A1A1A;
+    line-height: 1.6;
+  }
+
+  .phone-link {
+    color: #d32f2f;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.2s ease;
+  }
+
+  .phone-link:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+  }
+
+  .button-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn {
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+  }
+
+  .btn-primary {
+    background-color: #d32f2f;
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background-color: #b71c1c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
+  }
+
+  .btn-secondary {
+    background-color: transparent;
+    color: #d32f2f;
+    border: 2px solid #d32f2f;
+  }
+
+  .btn-secondary:hover {
+    background-color: #d32f2f;
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  .confirmation-footer {
+    font-family: var(--font-serif);
+    font-size: 0.95rem;
+    color: #1A1A1A;
+    opacity: 0.7;
+    margin: 0;
+    font-style: italic;
+  }
+
+  @media (max-width: 640px) {
+    .confirmation-container {
+      padding: 1rem;
+    }
+
+    .confirmation-title {
+      font-size: 2.5rem;
+    }
+
+    .checkmark {
+      width: 80px;
+      height: 80px;
+    }
+
+    .checkmark svg {
+      width: 50px;
+      height: 50px;
+    }
+
+    .button-group {
+      flex-direction: column;
+    }
+
+    .btn {
+      width: 100%;
+    }
+  }
+</style>
