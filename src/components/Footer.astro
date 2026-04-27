@@ -4,8 +4,8 @@
 <footer class="footer">
   <div class="footer-top">
     <div class="footer-logo">
-      <img src="/assets/logos/delivrables/PNG/full-colors.png" alt="Frites Atelier" class="logo-img" />
-      <span class="logo-tagline">AMSTERDAM</span>
+      <img src="/assets/logos/delivrables/PNG/full-colors.png" alt="Serghini Frites" class="logo-img" />
+      <span class="logo-tagline">CASABLANCA</span>
     </div>
 
     <div class="footer-links">
@@ -19,7 +19,7 @@
 
       <div class="link-column">
         <a href="/partenaires">PARTENARIATS</a>
-        <a href="/wholesale">WHOLESALE</a>
+        <a href="/wholesale">VENTE EN GROS</a>
         <a href="/locations">NOS ATELIERS</a>
       </div>
 
@@ -40,16 +40,16 @@
 
   <div class="footer-bottom">
     <div class="footer-legal">
-      <span>&copy; 2026 FRITES ATELIER</span>
-      <span class="separator">•</span>
-      <span>CREDITS WEB</span>
+      <span>&copy; 2026 Evolution Ltd. Tous droits réservés.</span>
     </div>
     <div class="footer-legal">
-      <a href="#">CONDITIONS GÉNÉRALES D'UTILISATION</a>
+      <a href="/conditions">CONDITIONS GÉNÉRALES D'UTILISATION</a>
       <span class="separator">•</span>
-      <a href="#">POLITIQUE DE CONFIDENTIALITÉ</a>
-      <span class="separator">•</span>
-      <a href="#">POLITIQUE EN MATIÈRE DE COOKIES</a>
+      <a href="/copyright">MENTIONS LÉGALES</a>
+    </div>
+    <div class="footer-contact">
+      <p>147, Bd Zerktouni étage5, bureau 12 – Casablanca, Maroc</p>
+      <p><a href="tel:+212665951321">+212 665 951 321</a></p>
     </div>
   </div>
 </footer>
@@ -148,11 +148,32 @@
     color: rgba(255, 255, 255, 0.9);
   }
 
-  .separator {
-    opacity: 0.4;
-  }
+   .separator {
+     opacity: 0.4;
+   }
 
-  @media (max-width: 1024px) {
+   .footer-contact {
+     font-family: var(--font-sans);
+     font-size: 0.8rem;
+     color: rgba(255, 255, 255, 0.6);
+     text-align: right;
+   }
+
+   .footer-contact p {
+     margin: 0.25rem 0;
+   }
+
+   .footer-contact a {
+     color: rgba(255, 255, 255, 0.8);
+     text-decoration: none;
+     transition: color 0.3s ease;
+   }
+
+   .footer-contact a:hover {
+     color: #FFFFFF;
+   }
+
+   @media (max-width: 1024px) {
     .footer-top {
       flex-direction: column;
       padding: 4rem 2rem;
@@ -164,8 +185,28 @@
       gap: 2.5rem;
     }
 
-    .footer-bottom {
-      padding: 1.5rem 2rem;
+     .footer-bottom {
+       padding: 1.5rem 2rem;
+       flex-direction: column;
+       text-align: center;
+     }
+
+     .footer-legal {
+       flex-wrap: wrap;
+       justify-content: center;
+     }
+
+     .footer-contact {
+       text-align: center;
+     }
+
+    .footer-legal {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .footer-contact {
+      text-align: center;
     }
   }
 
@@ -196,6 +237,10 @@
       font-size: 0.6rem;
       flex-wrap: wrap;
       justify-content: center;
+      text-align: center;
+    }
+
+    .footer-contact {
       text-align: center;
     }
 

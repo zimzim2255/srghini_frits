@@ -6,74 +6,83 @@ import Layout from '../layouts/Layout.astro';
   <section class="intro">
     <span class="intro-label">CONTACT</span>
     <h1 class="intro-title">
-      <span>SELL OUR</span>
-      <span>POTATOES</span>
+      <span>NOUS</span>
+      <span>CONTACTER</span>
     </h1>
   </section>
 
-  <section class="contact">
-    <div class="contact-container">
-      <p class="contact-intro">
-        Si vous souhaitez proposer les fameuses Frites Serghini dans votre établissement, nous serions ravis de vous entendre. Remplissez le formulaire ci-dessous et nous vous contacterons.
-      </p>
+   <section class="contact">
+     <div class="contact-container">
+       <p class="contact-intro">
+         Si vous souhaitez proposer les fameuses Frites Serghini, préparées à Casablanca, dans votre établissement, nous serions ravis de vous entendre. Remplissez le formulaire ci-dessous et nous vous contacterons.
+       </p>
 
-      <form class="contact-form" id="contactForm">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="fullName">FULL NAME* <span class="required">*</span></label>
-            <input type="text" id="fullName" name="fullName" placeholder="Your full name" required />
-          </div>
-        </div>
+       <div class="contact-info">
+         <div class="contact-info-item">
+           <strong>Adresse :</strong> 147, Bd Zerktouni étage5, bureau 12 – Casablanca, Maroc
+         </div>
+         <div class="contact-info-item">
+           <strong>Téléphone :</strong> <a href="tel:+212665951321">+212 665 951 321</a>
+         </div>
+       </div>
 
-<div class="form-row">
+       <form class="contact-form" id="contactForm">
+         <div class="form-row">
            <div class="form-group">
-             <label for="email">BUSINESS EMAIL</label>
-             <input type="email" id="email" name="email" placeholder="your@business.com" />
+             <label for="fullName">NOM COMPLET * <span class="required">*</span></label>
+             <input type="text" id="fullName" name="fullName" placeholder="Votre nom complet" required />
+           </div>
+         </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">E-MAIL PROFESSIONNEL</label>
+              <input type="email" id="email" name="email" placeholder="votre@entreprise.com" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">NUMÉRO DE TÉLÉPHONE PRINCIPAL * <span class="required">*</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="+212 5XX XXX XXX" required />
+            </div>
+            <div class="form-group">
+              <label for="mobile">NUMÉRO DE TÉLÉPHONE PORTABLE</label>
+              <input type="tel" id="mobile" name="mobile" placeholder="+212 6XX XXX XXX" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="website">SITE WEB D'ENTREPRISE * <span class="required">*</span></label>
+              <input type="url" id="website" name="website" placeholder="https://votreentreprise.com" required />
+            </div>
+          </div>
+
+         <div class="form-row">
+           <div class="form-group form-full">
+             <label for="businessType">TYPE D'ENTREPRISE * <span class="required">*</span></label>
+             <select id="businessType" name="businessType" required>
+               <option value="">Sélectionnez votre type d'entreprise...</option>
+               <option value="restaurant">Restaurant</option>
+               <option value="cafe">Café</option>
+               <option value="hotel">Hôtel</option>
+               <option value="catering">Traiteur</option>
+               <option value="wholesaler">Grossiste</option>
+               <option value="retail">Détaillant</option>
+               <option value="other">Autre</option>
+             </select>
            </div>
          </div>
 
          <div class="form-row">
-           <div class="form-group">
-             <label for="phone">MAIN PHONE NUMBER* <span class="required">*</span></label>
-             <input type="tel" id="phone" name="phone" placeholder="+32 123 45 67 89" required />
-           </div>
-           <div class="form-group">
-             <label for="mobile">MOBILE PHONE NUMBER</label>
-             <input type="tel" id="mobile" name="mobile" placeholder="+32 412 34 56 78" />
+           <div class="form-group form-full">
+             <label for="message">MESSAGE* <span class="required">*</span></label>
+             <textarea id="message" name="message" placeholder="Parlez-nous de votre entreprise et de la manière dont vous souhaiteriez collaborer avec nous..." rows="5" required></textarea>
            </div>
          </div>
 
-         <div class="form-row">
-           <div class="form-group">
-             <label for="website">BUSINESS WEBSITE* <span class="required">*</span></label>
-             <input type="url" id="website" name="website" placeholder="https://yourbusiness.com" required />
-           </div>
-         </div>
-
-        <div class="form-row">
-          <div class="form-group form-full">
-            <label for="businessType">BUSINESS TYPE* <span class="required">*</span></label>
-            <select id="businessType" name="businessType" required>
-              <option value="">Select your business type...</option>
-              <option value="restaurant">Restaurant</option>
-              <option value="cafe">Café</option>
-              <option value="hotel">Hotel</option>
-              <option value="catering">Catering</option>
-              <option value="wholesaler">Wholesaler</option>
-              <option value="retail">Retail</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group form-full">
-            <label for="message">MESSAGE* <span class="required">*</span></label>
-            <textarea id="message" name="message" placeholder="Please tell us about your business and how you'd like to work with us..." rows="5" required></textarea>
-          </div>
-        </div>
-
-        <button type="submit" class="submit-btn">SUBMIT APPLICATION</button>
+         <button type="submit" class="submit-btn">SOUMETTRE LA CANDIDATURE</button>
       </form>
     </div>
   </section>
@@ -122,15 +131,44 @@ import Layout from '../layouts/Layout.astro';
     margin: 0 auto;
   }
 
-  .contact-intro {
-    font-family: var(--font-serif);
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #F4F1EA;
-    opacity: 0.9;
-    text-align: center;
-    margin-bottom: 3rem;
-  }
+   .contact-intro {
+     font-family: var(--font-serif);
+     font-size: 1.1rem;
+     line-height: 1.7;
+     color: #F4F1EA;
+     opacity: 0.9;
+     text-align: center;
+     margin-bottom: 2rem;
+   }
+
+   .contact-info {
+     display: flex;
+     flex-direction: column;
+     gap: 0.75rem;
+     margin-bottom: 2.5rem;
+     text-align: center;
+   }
+
+   .contact-info-item {
+     font-family: var(--font-sans);
+     font-size: 0.95rem;
+     color: #F4F1EA;
+     opacity: 0.9;
+   }
+
+   .contact-info-item a {
+     color: #F4F1EA;
+     text-decoration: none;
+     transition: opacity 0.3s ease;
+   }
+
+   .contact-info-item a:hover {
+     opacity: 0.7;
+   }
+
+   .contact-info-item strong {
+     font-weight: 600;
+   }
 
   .contact-form {
     display: flex;
@@ -290,7 +328,7 @@ import Layout from '../layouts/Layout.astro';
     
     if (isValid) {
       // In a real implementation, you would send the form data to your backend
-      alert('Thank you for your application! We will contact you soon.');
+      alert('Merci pour votre candidature ! Nous vous contacterons bientôt.');
       form.reset();
     }
   });

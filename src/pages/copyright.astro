@@ -1,0 +1,184 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+---
+
+<Layout title="Mentions Légales">
+  <section class="legal">
+    <div class="legal-container">
+      <h1 class="legal-title">MENTIONS LÉGALES</h1>
+
+      <div class="legal-section">
+        <h2>ÉDITEUR DU SITE</h2>
+        <p>
+          <strong>Evolution Ltd.</strong><br>
+          Société à responsabilité limitée<br>
+          147, Bd Zerktouni, étage 5, bureau 12<br>
+          20000 Casablanca, Maroc<br>
+          Téléphone : <a href="tel:+212665951321">+212 665 951 321</a><br>
+          Email : contact@serghinifrites.ma<br>
+          RC : [Numéro du registre de commerce]<br>
+          ICE : [Numéro d'identification fiscale]
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h2>DIRECTION DE LA PUBLICATION</h2>
+        <p>
+          Le directeur de la publication est :<br>
+          <strong>[Nom du directeur]</strong>, en qualité de Gérant
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h2>HÉBERGEMENT</h2>
+        <p>
+          Ce site est hébergé par :<br>
+          [Nom de l'hébergeur]<br>
+          [Adresse de l'hébergeur]
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h2>PROPRIÉTÉ INTELLECTUELLE</h2>
+        <p>
+          L'ensemble de ce site relève de la législation marocaine et internationale sur les droits d'auteur et la propriété intellectuelle. Tous les droits de reproduction, de représentation et de diffusion sont réservés.
+        </p>
+        <p>
+          Les marques, logos, images et textes sont la propriété exclusive de Evolution Ltd. Toute utilisation non autorisée est strictement interdite et pourra faire l'objet de poursuites judiciaires.
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h2>DONNÉES PERSONNELLES</h2>
+        <p>
+          Les informations collectées sur ce site sont traitées conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi marocaine sur la protection des données personnelles. Pour plus d'informations, veuillez consulter notre <a href="#">Politique de confidentialité</a>.
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h2>CRÉDITS</h2>
+        <p>
+          Conception et développement : [Agence web / Équipe technique]<br>
+          Photographies : [Crédits photos]
+        </p>
+      </div>
+
+      <div class="legal-footer">
+        <p>&copy; 2026 Evolution Ltd. Tous droits réservés.</p>
+        <p>Dernière mise à jour : 26 avril 2026</p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .legal {
+    background-color: #F4EFE6;
+    min-height: 100vh;
+    padding: 4rem 2rem;
+  }
+
+  .legal-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    padding: 4rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .legal-title {
+    font-family: 'Titan One', var(--font-serif), system-ui, serif;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #1A1A1A;
+    line-height: 1.2;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .legal-section {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #E0D8C8;
+  }
+
+  .legal-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .legal-section h2 {
+    font-family: var(--font-sans);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #111D3D;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .legal-section p {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #1A1A1A;
+    opacity: 0.9;
+    margin-bottom: 1rem;
+  }
+
+  .legal-section p:last-child {
+    margin-bottom: 0;
+  }
+
+  .legal-section a {
+    color: #8B0000;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .legal-section a:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+  }
+
+  .legal-section strong {
+    font-weight: 600;
+    color: #111D3D;
+  }
+
+  .legal-footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #E0D8C8;
+  }
+
+  .legal-footer p {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0.5rem 0;
+  }
+
+  @media (max-width: 768px) {
+    .legal {
+      padding: 2rem 1rem;
+    }
+
+    .legal-container {
+      padding: 2rem 1.5rem;
+    }
+
+    .legal-section h2 {
+      font-size: 1.1rem;
+    }
+
+    .legal-section p {
+      font-size: 0.95rem;
+    }
+  }
+</style>

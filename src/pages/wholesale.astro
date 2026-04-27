@@ -2,12 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Wholesale">
+<Layout title="Vente en Gros">
   <section class="intro">
-    <span class="intro-label">WHOLESALE</span>
-    <h1 class="intro-title">WHOLESALE</h1>
+    <span class="intro-label">VENTE EN GROS</span>
+    <h1 class="intro-title">VENTE EN GROS</h1>
     <p class="intro-text">
-      Les fameuses Frites créées par Sergio Herman sont maintenant disponibles pour votre restaurant. Élevez votre offre avec la perfection dorée et croustillante dont vos clients se souviendront.
+      Les fameuses Frites créées par Sergio Herman sont maintenant disponibles pour votre restaurant à Casablanca. Élevez votre offre avec la perfection dorée et croustillante dont vos clients se souviendront.
     </p>
   </section>
 
@@ -17,12 +17,12 @@ import Layout from '../layouts/Layout.astro';
         <span class="feature-label">AU SERVICE DES PROFESSIONNELS</span>
         <h2 class="feature-title">VOUS FAITES FRIRE NOS FRITES?</h2>
         <p class="feature-text">
-          Frites Atelier réunit le goût, la personnalité et un savoir-faire obsessionnel. Le même soin a été apporté à nos fameuses Frites, développées au fil des ans avec Lamb Weston et perfectionnées par Sergio Herman lui-même. Pour la première fois, elles sont disponibles auprès de grossistes sélectionnés.
+          Serghini Frites réunit le goût, la personnalité et un savoir-faire obsessionnel. Le même soin a été apporté à nos fameuses Frites, développées au fil des ans avec Lamb Weston et perfectionnées par Sergio Herman lui-même. Pour la première fois, elles sont disponibles auprès de grossistes sélectionnés.
         </p>
       </div>
-      <div class="feature-image">
-        <img src="https://goldenfries.com.au/wp-content/uploads/2024/09/POTATOES-822x1024.jpg" alt="Hand dipping fry" />
-      </div>
+       <div class="feature-image">
+         <img src="https://goldenfries.com.au/wp-content/uploads/2024/09/POTATOES-822x1024.jpg" alt="Main plongeant dans une frite" />
+       </div>
     </div>
 
     <div class="feature-block feature-alt">
@@ -33,25 +33,34 @@ import Layout from '../layouts/Layout.astro';
           Sergio Herman n'a jamais suivi les règles. Il les redéfinit. Ces Frites ne font pas exception. Élaborées après des années de collaboration, de raffinement et d'obsession tranquille, elles sont le produit d'une véritable conviction culinaire. Dorées, croustillantes et d'un raffinement sans équivoque, elles sont faites pour les chefs et les restaurants qui exigent plus que ce qui est attendu. Lorsqu'elles sont préparées avec soin, elles sont plus qu'un accompagnement. Elles sont une signature.
         </p>
       </div>
-      <div class="feature-image">
-        <img src="https://goldenfries.com.au/wp-content/uploads/2024/08/GF_BallaratFarm_022.png" alt="Person biting fry" />
-      </div>
+       <div class="feature-image">
+         <img src="https://goldenfries.com.au/wp-content/uploads/2024/08/GF_BallaratFarm_022.png" alt="Personne mordant une frite" />
+       </div>
     </div>
   </section>
 
-  <section class="contact">
-    <div class="contact-container">
-      <span class="contact-label">POSTULER DES MAINTENANT</span>
-      <h1 class="contact-title">
-        <span>COMMENCER À</span>
-        <span>VENDRE NOS</span>
-        <span>FRITES</span>
-      </h1>
-      <p class="contact-intro">
-        Si vous êtes prêt à faire venir Frites Atelier dans votre restaurant, votre entreprise ou votre région, nous serions ravis de vous entendre. Remplissez le formulaire ci-dessous et nous vous contacterons.
-      </p>
+   <section class="contact">
+     <div class="contact-container">
+       <span class="contact-label">POSTULER MAINTENANT</span>
+       <h1 class="contact-title">
+         <span>COMMENCER À</span>
+         <span>VENDRE NOS</span>
+         <span>FRITES</span>
+       </h1>
+       <p class="contact-intro">
+         Si vous êtes prêt à faire venir les Frites Serghini, préparées à Casablanca, dans votre restaurant, votre entreprise ou votre région, nous serions ravis de vous entendre. Remplissez le formulaire ci-dessous et nous vous contacterons.
+       </p>
 
-      <form class="contact-form">
+       <div class="contact-info">
+         <div class="contact-info-item">
+           <strong>Adresse :</strong> 147, Bd Zerktouni étage5, bureau 12 – Casablanca, Maroc
+         </div>
+         <div class="contact-info-item">
+           <strong>Téléphone :</strong> <a href="tel:+212665951321">+212 665 951 321</a>
+         </div>
+       </div>
+
+       <form class="contact-form">
         <div class="form-row">
           <div class="form-group">
             <label for="name">NOM COMPLET *</label>
@@ -66,11 +75,11 @@ import Layout from '../layouts/Layout.astro';
         <div class="form-row">
           <div class="form-group">
             <label for="phone">NUMÉRO DE TÉLÉPHONE PRINCIPAL *</label>
-            <input type="tel" id="phone" name="phone" placeholder="+31 6 12345678" required />
+            <input type="tel" id="phone" name="phone" placeholder="+212 5XX XXX XXX" required />
           </div>
           <div class="form-group">
             <label for="mobile">NUMÉRO DE TÉLÉPHONE PORTABLE</label>
-            <input type="tel" id="mobile" name="mobile" placeholder="+31 6 12345678" />
+            <input type="tel" id="mobile" name="mobile" placeholder="+212 6XX XXX XXX" />
           </div>
         </div>
 
@@ -80,8 +89,8 @@ import Layout from '../layouts/Layout.astro';
             <input type="url" id="website" name="website" placeholder="https://website.com" required />
           </div>
           <div class="form-group">
-            <label for="bce">EXTRAIT BCE</label>
-            <input type="text" id="bce" name="bce" placeholder="12346789" />
+            <label for="rc">EXTRAIT DU REGISTRE DE COMMERCE</label>
+            <input type="text" id="rc" name="rc" placeholder="Numéro RC" />
           </div>
         </div>
 
@@ -255,15 +264,38 @@ import Layout from '../layouts/Layout.astro';
     text-align: center;
   }
 
-  .contact-intro {
-    font-family: var(--font-serif);
-    font-size: 1rem;
-    line-height: 1.7;
-    color: #1A1A1A;
-    opacity: 0.85;
-    text-align: center;
-    margin-bottom: 3rem;
-  }
+   .contact-intro {
+     font-family: var(--font-serif);
+     font-size: 1rem;
+     line-height: 1.7;
+     color: #1A1A1A;
+     opacity: 0.85;
+     text-align: center;
+     margin-bottom: 1.5rem;
+   }
+
+   .contact-info {
+     display: flex;
+     flex-direction: column;
+     gap: 0.75rem;
+     margin-bottom: 2.5rem;
+     text-align: center;
+   }
+
+   .contact-info-item {
+     font-family: var(--font-sans);
+     font-size: 0.95rem;
+     color: #1A1A1A;
+   }
+
+   .contact-info-item a {
+     color: #1A1A1A;
+     text-decoration: none;
+   }
+
+   .contact-info-item a:hover {
+     text-decoration: underline;
+   }
 
   .contact-form {
     display: flex;

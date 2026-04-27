@@ -3,22 +3,24 @@ import Layout from '../layouts/Layout.astro';
 
 ---
 
-<Layout title="Home">
+<Layout title="Accueil">
   <section class="hero">
     <div class="hero-left">
       <div class="hero-content">
         <h1 class="hero-headline">
-          <span class="headline-word">THE</span>
-          <span class="headline-word">BEST</span>
+          <span class="headline-word">LES</span>
+          <span class="headline-word">MEILLEURES</span>
           <span class="headline-word headline-frites">FRITES</span>
-          <span class="headline-word">IN</span>
-          <span class="headline-word">THE</span>
-          <span class="headline-word">WORLD</span>
+          <span class="headline-word">DU</span>
+          <span class="headline-word">MAROC</span>
+          <span class="headline-word">ET</span>
+          <span class="headline-word">DU</span>
+          <span class="headline-word">MONDE</span>
         </h1>
       </div>
       <button class="sound-toggle" id="soundToggle">
         <span class="sound-dot"></span>
-        <span class="sound-label">SOUND: <span id="soundStatus">OFF</span></span>
+        <span class="sound-label">SON : <span id="soundStatus">DÉSACTIVÉ</span></span>
       </button>
     </div>
     <div class="hero-right">
@@ -40,38 +42,38 @@ import Layout from '../layouts/Layout.astro';
     <div class="story-left">
       <div class="gallery-wrapper">
         <div class="gallery-text">
-          <span class="gallery-label">THE EXPERIENCE</span>
-          <h3 class="gallery-headline">A TASTE<br />OF <span class="luxury-text">LUXURY</span></h3>
-          <p class="gallery-body">
-            Experience the golden perfection of Frites Atelier. Handcrafted with passion, served with pride.
-          </p>
-          <a href="/produits" class="gallery-cta">DISCOVER MORE</a>
+          <span class="gallery-label">L'EXPÉRIENCE SERGHINI</span>
+          <h3 class="gallery-headline">UN GOÛT<br />DE <span class="luxury-text">LUXE MAROCAIN</span></h3>
+      <p class="gallery-body">
+        Découvrez la perfection dorée des Frites Serghini, préparées artisanalement avec passion dans notre atelier de Casablanca, servies avec fierté et un cachet 100% marocain.
+      </p>
+          <a href="/produits" class="gallery-cta">DÉCOUVRIR PLUS</a>
         </div>
         <div class="gallery-scroll">
-          <img src="https://goldenfries.com.au/wp-content/uploads/2024/08/GF_BallaratFarm_065-2.png" alt="Lifestyle frites" />
+          <img src="https://goldenfries.com.au/wp-content/uploads/2024/08/GF_BallaratFarm_065-2.png" alt="Ambiance Frites Serghini" />
         </div>
       </div>
     </div>
     <div class="story-right">
-      <span class="story-label">OUR STORY</span>
+      <span class="story-label">NOTRE HISTOIRE</span>
       <h2 class="story-headline">
-        THE BEST <span class="frites-black">FRITES</span><br />IN THE WORLD
+        LES MEILLEURES <span class="frites-black">FRITES</span><br />DU MAROC
       </h2>
       <p class="story-body">
-        The exquisite creation of visionary three-Michelin-starred chef Sergio Herman, our Frites are an expression of excellence and are F***ing Perfect.
+        La création exquise du chef triplement étoilé Michelin Sergio Herman, nos Frites Serghini sont l'expression absolue de l'excellence. Simplement Parfaites.
       </p>
       <p class="story-body">
-        Paired with luxurious toppings and a choice of handmade sauces, Frites Atelier Frites are a gourmet culinary experience that defies convention.
+        Accompagnées de garnitures luxueuses et d'un choix de sauces artisanales, les Frites Serghini offrent une expérience culinaire gastronomique qui défie toutes les conventions.
       </p>
       <blockquote class="story-quote">
-        "Perfection has earned me three Michelin stars, and even the simplest dish,
-        like truly delicious Frites, deserves the same dedication. Enjoy!"
+        "La perfection m'a valu trois étoiles Michelin, et même le plat le plus simple,
+        comme de délicieuses Frites, mérite cette même exigence. Savourez!"
         <cite>— Sergio Herman</cite>
       </blockquote>
       <div class="story-cta">
-        <a href="/histoire" class="cta-primary">MORE ABOUT US</a>
+        <a href="/histoire" class="cta-primary">EN SAVOIR PLUS</a>
         <a href="#" class="cta-secondary">
-          <span class="play-icon">▶</span> WATCH VIDEO
+          <span class="play-icon">▶</span> REGARDER LA VIDÉO
         </a>
       </div>
     </div>
@@ -79,36 +81,36 @@ import Layout from '../layouts/Layout.astro';
 
   <section class="signature" id="signatureSection">
     <div class="signature-header">
-      <span class="signature-label">FOOD & DRINKS</span>
-      <h2 class="signature-headline">SIGNATURE DISHES</h2>
+      <span class="signature-label">ART DE VIVRE MAROCAIN</span>
+      <h2 class="signature-headline">CRÉATIONS SIGNATURE</h2>
       <p class="signature-body">
-        Each flavour is thoughtfully developed by Michelin-starred chef Sergio Herman from his private kitchen in Antwerp.
+        Chaque saveur est méticuleusement développée par le chef étoilé Sergio Herman depuis son atelier privé à Casablanca, au cœur de la tradition marocaine.
       </p>
-      <a href="/produits" class="signature-cta">DISCOVER FULL MENU →</a>
+      <a href="/produits" class="signature-cta">DÉCOUVRIR LA CARTE →</a>
     </div>
     <div class="signature-gallery">
       <div class="slider-container">
         <div class="slider-track" id="signatureSlider">
 <div class="slide">
-             <div class="slide-image" style="background-image: url('https://goldenfries.com.au/wp-content/uploads/2024/09/POTATOES-822x1024.jpg')"></div>
-             <span class="slide-name">Korean Chicken Burger</span>
+              <div class="slide-image" style="background-image: url('https://goldenfries.com.au/wp-content/uploads/2024/09/POTATOES-822x1024.jpg')"></div>
+              <span class="slide-name">Burger Poulet Marocain</span>
+            </div>
+           <div class="slide">
+              <div class="slide-image" style="background-image: url('https://goldenfries.com.au/wp-content/uploads/2024/08/GF_BallaratFarm_022.png')"></div>
+              <span class="slide-name">Chili Végétarien au Fromage</span>
+            </div>
+            <div class="slide">
+               <div class="slide-image" style="background-image: url('https://goldenfries.com.au/wp-content/uploads/2024/08/GF_BallaratFarm_022.png')"></div>
+               <span class="slide-name">Parmesan et Basilic</span>
+             </div>
+            <div class="slide">
+               <div class="slide-image" style="background-image: url('https://goldenfries.com.au/wp-content/uploads/2024/09/POTATOES-822x1024.jpg')"></div>
+               <span class="slide-name">Royal Rendang Épicé</span>
+             </div>
+           <div class="slide">
+             <div class="slide-image" style="background-image: url('https://goldenfries.com.au/wp-content/uploads/2024/08/GF_Parwan_059.png')"></div>
+             <span class="slide-name">Spécial Serghini</span>
            </div>
-          <div class="slide">
-             <div class="slide-image" style="background-image: url('https://goldenfries.com.au/wp-content/uploads/2024/08/GF_BallaratFarm_022.png')"></div>
-             <span class="slide-name">Veggie Chili Con Queso</span>
-           </div>
-          <div class="slide">
-             <div class="slide-image" style="background-image: url('/src/assets/pics/frenchfries_ukraine_nov25-900x630.jpg.webp')"></div>
-             <span class="slide-name">Spicy Royal Rendang</span>
-           </div>
-  <div class="slide">
-            <div class="slide-image" style="background-image: url('/src/assets/pics/Frozen-French-Fries-Processing.jpg')"></div>
-            <span class="slide-name">Parmesan & Basil</span>
-          </div>
-          <div class="slide">
-            <div class="slide-image" style="background-image: url('https://goldenfries.com.au/wp-content/uploads/2024/08/GF_Parwan_059.png')"></div>
-            <span class="slide-name">Golden Fries Special</span>
-          </div>
         </div>
         <div class="slider-nav">
           <button class="slider-btn prev" id="prevBtn">←</button>
@@ -120,95 +122,95 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
    <section class="ateliers" id="ateliersSection">
-     <div class="ateliers-top">
-       <div class="ateliers-content">
-         <div class="ateliers-labels">
-           <span>WHOLESALE</span>
-         </div>
-         <span class="ateliers-gold">NOS ATELIERS</span>
-         <span class="ateliers-subheading">DÉCOUVREZ NOS<br />ATELIERS</span>
-         <a href="/ateliers" class="ateliers-cta">TROUVEZ VOTRE ATELIER</a>
-         <p class="ateliers-body">
-           Découvrez l'expérience Frites Atelier dans nos magnifique Ateliers. Chaque lieu allie excellence gastronomique et luxe ordinaire; un espace méticuleusement conçu pour vous immerger dans l'atmosphère qui nous caractérise.
-         </p>
-       </div>
-     </div>
-     <div class="ateliers-bottom">
-       <div class="ateliers-bg">
-         <img 
-           src="https://goldenfries.com.au/wp-content/uploads/2024/08/GF_Parwan_059.png" 
-           alt="Frites Atelier Interior" 
-           class="ateliers-image"
-         />
-         <div class="image-gallery">
-           <img src="https://goldenfries.com.au/wp-content/uploads/2024/08/GF_Parwan_059.png" alt="Frites Atelier Interior 1" />
-           <img src="https://goldenfries.com.au/wp-content/uploads/2024/09/POTATOES-822x1024.jpg" alt="Frites Atelier Interior 2" />
-           <img src="https://goldenfries.com.au/wp-content/uploads/2024/08/GF_BallaratFarm_022.png" alt="Frites Atelier Interior 3" />
-           <img src="/src/assets/pics/frenchfries_ukraine_nov25-900x630.jpg.webp" alt="Frites Atelier Interior 4" />
-           <img src="/src/assets/pics/Frozen-French-Fries-Processing.jpg" alt="Frites Atelier Interior 5" />
-           <img src="https://goldenfries.com.au/wp-content/uploads/2024/08/GF_Parwan_059.png" alt="Frites Atelier Interior 6" />
-         </div>
-       </div>
-     </div>
-   </section>
-   
-
+      <div class="ateliers-top">
+        <div class="ateliers-content">
+          <div class="ateliers-labels">
+            <span>VENTE EN GROS</span>
+          </div>
+          <span class="ateliers-gold">NOS ATELIERS</span>
+          <span class="ateliers-subheading">DÉCOUVREZ NOS<br />ATELIERS</span>
+          <a href="/ateliers" class="ateliers-cta">TROUVEZ VOTRE ATELIER</a>
+          <p class="ateliers-body">
+            Découvrez l'expérience Frites Serghini dans nos magnifiques Ateliers à Casablanca et à travers le Maroc. Chaque lieu allie excellence gastronomique et luxe authentique; un espace méticuleusement conçu pour vous immerger dans l'atmosphère qui nous caractérise.
+          </p>
+        </div>
+      </div>
+      <div class="ateliers-bottom">
+        <div class="ateliers-bg">
+          <img 
+            src="https://goldenfries.com.au/wp-content/uploads/2024/08/GF_Parwan_059.png" 
+            alt="Intérieur Atelier Frites Serghini" 
+            class="ateliers-image"
+          />
+          <div class="image-gallery">
+            <img src="https://goldenfries.com.au/wp-content/uploads/2024/08/GF_Parwan_059.png" alt="Intérieur Atelier 1" />
+            <img src="https://goldenfries.com.au/wp-content/uploads/2024/09/POTATOES-822x1024.jpg" alt="Intérieur Atelier 2" />
+            <img src="https://goldenfries.com.au/wp-content/uploads/2024/08/GF_BallaratFarm_022.png" alt="Intérieur Atelier 3" />
+             <img src="/assets/pics/frenchfries_ukraine_nov25-900x630.jpg.webp" alt="Intérieur Atelier 4" />
+             <img src="/assets/pics/Frozen-French-Fries-Processing.jpg" alt="Intérieur Atelier 5" />
+            <img src="https://goldenfries.com.au/wp-content/uploads/2024/08/GF_Parwan_059.png" alt="Intérieur Atelier 6" />
+          </div>
+        </div>
+      </div>
+    </section>
+    
+ 
   <section class="art-frites" id="artFritesSection">
     <div class="art-frites-grid">
 <div class="art-image art-img-left-1">
       <img 
         src="https://goldenfries.com.au/wp-content/uploads/2024/09/POTATOES-822x1024.jpg" 
-        alt="Interior shot" 
+        alt="Intérieur restaurant" 
       />
     </div>
     <div class="art-image art-img-left-2">
       <img 
         src="https://goldenfries.com.au/wp-content/uploads/2024/08/GF_BallaratFarm_022.png" 
-        alt="Interior ambiance" 
+        alt="Ambiance chaleureuse" 
       />
     </div>
     <div class="art-image art-img-center">
       <img 
-        src="/src/assets/pics/frenchfries_ukraine_nov25-900x630.jpg.webp" 
-        alt="Golden frites" 
+              src="/assets/pics/frenchfries_ukraine_nov25-900x630.jpg.webp" 
+        alt="Frites dorées signature" 
       />
     </div>
     <div class="art-image art-img-right-1">
       <img 
-        src="/src/assets/pics/Frozen-French-Fries-Processing.jpg" 
-        alt="Exterior storefront" 
+        src="/assets/pics/Frozen-French-Fries-Processing.jpg" 
+        alt="Boutique emblématique" 
       />
     </div>
-<div class="art-image art-img-right-2">
+ <div class="art-image art-img-right-2">
       <img 
         src="https://goldenfries.com.au/wp-content/uploads/2024/08/GF_Parwan_059.png" 
-        alt="Seating area" 
+        alt="Espace d'accueil" 
       />
     </div>
        <div class="art-frites-content">
-         <span class="art-label">THE ART OF FRITES</span>
-         <h2 class="art-headline">F**KING<br />PERFECT</h2>
-         <a href="#" class="art-cta">DISCOVER MORE</a>
-         <p class="art-description">
-           It's about elevating the simplicity of a perfect, golden, crispy Frites dipped in mayonnaise to create the perfect Frites experience.
-         </p>
-         <p class="art-description">
-           After dedicating almost two years between the kitchen and the fields, to find the perfect potato, and six more of Sergio relentlessly refining every detail, we created a true game-changer.
-         </p>
-         <p class="art-description">
-           Golden and fluffy, with a crisp shell that gives just enough, our Frites are light, warm, and full of promise in every bite.
-         </p>
-       </div>
- <div class="art-image art-img-right-1">
+          <span class="art-label">L'ART DES FRITES SERGHINI</span>
+          <h2 class="art-headline">EXCELLENCE<br />ABSOLUE</h2>
+          <a href="#" class="art-cta">DÉCOUVRIR PLUS</a>
+          <p class="art-description">
+            C'est l'élévation de la simplicité d'une Frite parfaite, dorée et croustillante, trempée dans la mayonnaise, pour créer l'expérience ultime des Frites Serghini.
+          </p>
+          <p class="art-description">
+            Après avoir consacré près de deux ans entre la cuisine et les champs, pour sélectionner les variétés de pommes de terre parfaites - Agria, Bintje, et Spunta - et six années supplémentaires de Sergio à perfectionner chaque détail, nous avons créé un véritable chef-d'œuvre culinaire.
+          </p>
+          <p class="art-description">
+            Dorées et moelleuses à l'intérieur, avec une croûte croustillante qui cède juste ce qu'il faut, nos Frites sont légères, chaleureuses et pleines de promesses à chaque bouchée.
+          </p>
+        </div>
+  <div class="art-image art-img-right-1">
       <img 
         src="https://goldenfries.com.au/wp-content/uploads/2024/08/GF_BallaratFarm_022.png" 
-        alt="Exterior storefront" 
+        alt="Notre signature culinaire" 
       />
     </div>
     <div class="art-image art-img-right-2">
       <img 
         src="https://goldenfries.com.au/wp-content/uploads/2024/08/GF_Parwan_059.png" 
-        alt="Seating area" 
+        alt="Notre espace emblématique" 
       />
     </div>
     </div>
@@ -216,74 +218,74 @@ import Layout from '../layouts/Layout.astro';
 
   <section class="affaires">
     <div class="affaires-content">
-      <span class="affaires-label">AFFAIRES</span>
+      <span class="affaires-label">HÔTELLERIE & RESTAURATION</span>
       <div class="affaires-cta-box">
-        <h2 class="affaires-headline">COLLABORER<br />AVEC EXCELLENCE</h2>
+        <h2 class="affaires-headline">EXCELLENCE<br />MAROCAINE</h2>
       </div>
       <p class="affaires-body">
-        Frites Atelier est plus qu'un produit. C'est un concept culinaire conçu pour l'hôtellerie haut de gamme. Des hôtels de charme aux établissements haut de gamme, nous créons des solutions sur mesure qui apportent notre perfection dorée à la table. Construisons ensemble quelque chose d'exceptionnel.
+        Serghini Frites est plus qu'un produit. C'est un concept culinaire marocain d'exception, basé à Casablanca, conçu pour l'hôtellerie haut de gamme. Des riads de charme aux palais prestigieux, nous créons des solutions sur mesure qui apportent notre perfection dorée authentiquement marocaine à votre table.
       </p>
        <div class="affaires-links">
-         <a href="/wholesale" class="affaires-link">WHOLESALE</a>
-       </div>
+          <a href="/wholesale" class="affaires-link">VENTE EN GROS</a>
+        </div>
     </div>
    </section>
 
-   <script>
-    // Signature Slider functionality
-    const slider = document.getElementById('signatureSlider');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const dotsContainer = document.getElementById('sliderDots');
-
-    if (slider && prevBtn && nextBtn && dotsContainer) {
-      const slides = slider.querySelectorAll('.slide');
-      let currentIndex = 0;
-      const slideCount = slides.length;
-
-      // Create dots
-      slides.forEach((_, index) => {
-        const dot = document.createElement('button');
-        dot.classList.add('slider-dot');
-        if (index === 0) dot.classList.add('active');
-        dot.addEventListener('click', () => goToSlide(index));
-        dotsContainer.appendChild(dot);
-      });
-
-      const dots = dotsContainer.querySelectorAll('.slider-dot');
-
-      function updateSlider() {
-        const slideWidth = slides[0].offsetWidth + 32; // slide width + gap
-        slider.scrollTo({
-          left: currentIndex * slideWidth,
-          behavior: 'smooth'
-        });
-
-        dots.forEach((dot, index) => {
-          dot.classList.toggle('active', index === currentIndex);
-        });
-      }
-
-      function goToSlide(index) {
-        currentIndex = index;
-        updateSlider();
-      }
-
-      function nextSlide() {
-        currentIndex = (currentIndex + 1) % slideCount;
-        updateSlider();
-      }
-
-      function prevSlide() {
-        currentIndex = (currentIndex - 1 + slideCount) % slideCount;
-        updateSlider();
-      }
-
-      nextBtn.addEventListener('click', nextSlide);
-      prevBtn.addEventListener('click', prevSlide);
-
-      // Auto-advance every 5 seconds
-      setInterval(nextSlide, 5000);
-    }
-  </script>
+  <script>
+     // Signature Slider functionality
+     const slider = document.getElementById('signatureSlider');
+     const prevBtn = document.getElementById('prevBtn');
+     const nextBtn = document.getElementById('nextBtn');
+     const dotsContainer = document.getElementById('sliderDots');
+ 
+     if (slider && prevBtn && nextBtn && dotsContainer) {
+       const slides = slider.querySelectorAll('.slide');
+       let currentIndex = 0;
+       const slideCount = slides.length;
+ 
+       // Create dots
+       slides.forEach((_, index) => {
+         const dot = document.createElement('button');
+         dot.classList.add('slider-dot');
+         if (index === 0) dot.classList.add('active');
+         dot.addEventListener('click', () => goToSlide(index));
+         dotsContainer.appendChild(dot);
+       });
+ 
+       const dots = dotsContainer.querySelectorAll('.slider-dot');
+ 
+       function updateSlider() {
+         const slideWidth = slides[0].offsetWidth + 32; // slide width + gap
+         slider.scrollTo({
+           left: currentIndex * slideWidth,
+           behavior: 'smooth'
+         });
+ 
+         dots.forEach((dot, index) => {
+           dot.classList.toggle('active', index === currentIndex);
+         });
+       }
+ 
+       function goToSlide(index) {
+         currentIndex = index;
+         updateSlider();
+       }
+ 
+       function nextSlide() {
+         currentIndex = (currentIndex + 1) % slideCount;
+         updateSlider();
+       }
+ 
+       function prevSlide() {
+         currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+         updateSlider();
+       }
+ 
+       nextBtn.addEventListener('click', nextSlide);
+       prevBtn.addEventListener('click', prevSlide);
+ 
+       // Auto-advance every 5 seconds
+       setInterval(nextSlide, 5000);
+     }
+   </script>
 </Layout>

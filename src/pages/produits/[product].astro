@@ -6,103 +6,103 @@ export async function getStaticPaths() {
   const fritesProducts = [
     {
       slug: 'frites-with-sauce',
-      name: 'FRITES WITH SAUCE',
+      name: 'FRITES AVEC SAUCE',
       category: 'frites',
-      image: 'https://goldenfries.com.au/wp-content/uploads/2024/09/10mm-Fries-Images-%E2%80%93-5-1.png',
-      description: 'Nos frites spéciales 10mm, coupées à la perfection et frites dans un mélange d\'huiles végétales premium. Une texture croustillante à l\'extérieur, moelleuse à l\'intérieur, accompagnée de notre sélection de sauces artisanales.',
+      image: '/assets/pics/frenchfries_ukraine_nov25-900x630.jpg.webp',
+      description: 'Nos frites spéciales 10mm, coupées à la perfection et frites dans un mélange d\'huiles végétales premium. Une texture croustillante à l\'extérieur, moelleuse à l\'intérieur, accompagnée de notre sélection de sauces artisanales, préparées à Casablanca.',
       details: {
         size: '10mm',
         type: 'Frites spéciales',
         preparation: 'Frites fraîches coupées à la main',
-        ingredients: 'Pommes de terre belges, huile de colza, huile de tournesol, huile de maïs',
+        ingredients: 'Pommes de terre marocaines, huile de colza, huile de tournesol, huile de maïs',
         allergens: 'Sans gluten',
-        origin: 'Pommes de terre belges de qualité supérieure',
+        origin: 'Pommes de terre marocaines de qualité supérieure',
         cooking: 'Frites dans un mélange d\'huiles végétales'
       },
       nutrition: '100% naturel, sans additifs artificiels',
-      pairings: ['Classic Mayo', 'Truffle Sauce', 'Andalouse']
+      pairings: ['MAYONNAISE CLASSIQUE', 'MAYONNAISE À LA TRUFFE', 'ANDALOUSE']
     },
     {
-      slug: 'veggie-chili-con-queso',
-      name: 'VEGGIE CHILI CON QUESO',
+      slug: 'chili-vegetarien',
+      name: 'CHILI VÉGÉTARIEN AU FROMAGE',
       category: 'frites',
-      image: 'https://goldenfries.com.au/wp-content/uploads/2024/09/13mm-Fries-Images-–-6-1.png',
-      description: 'Des frites 13mm épaisses et robustes, parfaitement adaptées pour supporter notre délicieux chili con queso végétarien et notre cheddar fondant. Un plat complet qui ravira les végétariens et les amateurs de saveurs intenses.',
+      image: '/assets/pics/Frozen-French-Fries-Processing.jpg',
+      description: 'Des frites 13mm épaisses et robustes, parfaitement adaptées pour supporter notre délicieux chili con queso végétarien et notre cheddar fondant. Un plat complet qui ravira les végétariens et les amateurs de saveurs intenses, préparé à Casablanca.',
       details: {
         size: '13mm',
         type: 'Frites épaisses',
         preparation: 'Frites fraîches épaisses',
-        ingredients: 'Pommes de terre belges, huile de colza, huile de tournesol, huile de maïs, chili végétarien, queso fondu',
+        ingredients: 'Pommes de terre marocaines, huile de colza, huile de tournesol, huile de maïs, chili végétarien, queso fondu',
         allergens: 'Sans gluten, contient produits laitiers',
         origin: 'Recette inspirée des saveurs Tex-Mex',
         cooking: 'Frites dans un mélange d\'huiles végétales'
       },
       nutrition: 'Riche en protéines végétales, source de fibres',
-      pairings: ['Bearnaise', 'Basil Mayo']
+      pairings: ['BÉARNAISE', 'MAYONNAISE AU BASILIC']
     },
     {
-      slug: 'parmesan-basil',
-      name: 'PARMESAN & BASIL',
+      slug: 'parmesan-basilic',
+      name: 'PARMESAN ET BASILIC',
       category: 'frites',
-      image: 'https://goldenfries.com.au/wp-content/uploads/2024/09/GF_7mm_001c.png',
-      description: 'Frites fines et croustillantes de 7mm, parsemées de parmesan authentique et de basilic frais. Une combinaison italienne classique qui sublime la saveur naturelle de nos pommes de terre belges. Sans gluten, parfait pour les personnes allergiques.',
+      image: '/assets/pics/fresh-french-fries-for-eating-720x411.avif',
+      description: 'Frites fines et croustillantes de 7mm, parsemées de parmesan authentique et de basilic frais. Une combinaison italienne classique qui sublime la saveur naturelle de nos pommes de terre marocaines. Sans gluten, parfait pour les personnes allergiques.',
       details: {
         size: '7mm',
         type: 'Frites fines',
         preparation: 'Frites croustillantes au parmesan',
-        ingredients: 'Pommes de terre belges, huile de colza, huile de tournesol, huile de maïs, parmesan AOP, basilic frais',
+        ingredients: 'Pommes de terre marocaines, huile de colza, huile de tournesol, huile de maïs, parmesan AOP, basilic frais',
         allergens: 'Sans gluten, contient lactose',
         origin: 'Inspiration italienne authentique',
         cooking: 'Frites dans un mélange d\'huiles végétales'
       },
       nutrition: 'Sans gluten, faible teneur en matières grasses',
-      pairings: ['Classic Mayo', 'Truffle']
+      pairings: ['MAYONNAISE CLASSIQUE', 'MAYONNAISE À LA TRUFFE']
     },
     {
-      slug: 'indo-peanut',
-      name: 'INDO PEANUT',
+      slug: 'arachides-indonesiennes',
+      name: 'ARACHIDES INDONÉSIENNES',
       category: 'frites',
-      image: 'https://goldenfries.com.au/wp-content/uploads/2024/09/Steak-Fries-Images-–-8-1.png',
-      description: 'Steak fries épaisses et charnues, nappées d\'une sauce aux cacahuètes crémeuse épicée à la façon indonésienne. Une explosion de saveurs asiatiques qui réveille les papilles, parfaite pour les amateurs de cuisine du monde.',
+      image: '/assets/pics/11-9-Potatoes.jpg',
+      description: 'Steak fries épaisses et charnues, nappées d\'une sauce aux cacahuètes crémeuse épicée à la façon indonésienne. Une explosion de saveurs asiatiques qui réveille les papilles, parfaite pour les amateurs de cuisine du monde, élaborée à Casablanca.',
       details: {
         size: 'Steak Fries (format premium)',
         type: 'Frites extra-épaisses',
         preparation: 'Frites steak coupées à la main',
-        ingredients: 'Pommes de terre belges, huile de colza, huile de tournesol, huile de maïs, cacahuètes, sauce soja, épices indonésiennes',
+        ingredients: 'Pommes de terre marocaines, huile de colza, huile de tournesol, huile de maïs, cacahuètes, sauce soja, épices indonésiennes',
         allergens: 'Sans gluten, contient arachides, soja',
         origin: 'Saveurs traditionnelles indonésiennes',
         cooking: 'Frites dans un mélange d\'huiles végétales'
       },
       nutrition: 'Riches en protéines, source d\'énergie',
-      pairings: ['Truffle', 'Basil Mayo']
+      pairings: ['MAYONNAISE À LA TRUFFE', 'MAYONNAISE AU BASILIC']
     },
     {
-      slug: 'spicy-royal-rendang',
-      name: 'SPICY ROYAL RENDANG',
+      slug: 'rendang-epice',
+      name: 'RENDANG ROYAL ÉPICÉ',
       category: 'frites',
-      image: 'https://goldenfries.com.au/wp-content/uploads/2024/09/15mm-Fries-Images-–-7-1.png',
-      description: 'Frites généreuses de 15mm accompagnées d\'un rendang royal épicé, mijoté lentement selon la recette traditionnelle malaisienne. Une viande tendre et fondante dans une sauce riche et parfumée qui transforme une simple frite en expérience culinaire exceptionnelle.',
+      image: '/assets/pics/industrial-production-line-french-fries-factory-setting-351773366.webp',
+      description: 'Frites généreuses de 15mm accompagnées d\'un rendang royal épicé, mijoté lentement selon la recette traditionnelle malaisienne. Une viande tendre et fondante dans une sauce riche et parfumée qui transforme une simple frite en expérience culinaire exceptionnelle, préparée à Casablanca.',
       details: {
         size: '15mm',
         type: 'Frites extra-larges',
         preparation: 'Frites généreuses maison',
-        ingredients: 'Pommes de terre belges, huile de colza, huile de tournesol, huile de maïs, bœuf premium, lait de coco, épices malaisiennes (galanga, citronnelle, curcuma)',
+        ingredients: 'Pommes de terre marocaines, huile de colza, huile de tournesol, huile de maïs, bœuf premium, lait de coco, épices malaisiennes (galanga, citronnelle, curcuma)',
         allergens: 'Sans gluten, contient lait de coco',
         origin: 'Recette traditionnelle malaisienne',
         cooking: 'Frites dans un mélange d\'huiles végétales'
       },
       nutrition: 'Riche en protéines, sans additifs',
-      pairings: ['Classic Mayo', 'Andalouse', 'Bearnaise']
+      pairings: ['MAYONNAISE CLASSIQUE', 'ANDALOUSE', 'BÉARNAISE']
     }
   ];
 
   const sauceProducts = [
     {
       slug: 'classic-mayo',
-      name: 'CLASSIC MAYO',
+      name: 'MAYONNAISE CLASSIQUE',
       category: 'sauce',
       image: 'https://www.luxfries.com/assets/images/luxfries-3-115256-360x_.jpg',
-      description: 'La mayonnaise classique par excellence, préparée en petites quantités selon une recette traditionnelle. Une texture crémeuse et onctueuse qui accompagne parfaitement toutes nos spécialités de frites. Fabriquée sans additifs artificiels.',
+      description: 'La mayonnaise classique par excellence, préparée en petites quantités selon une recette traditionnelle. Une texture crémeuse et onctueuse qui accompagne parfaitement toutes nos spécialités de frites, préparées à Casablanca. Fabriquée sans additifs artificiels.',
       details: {
         type: 'Sauce traditionnelle',
         preparation: 'Fabriquée en petites quantités',
@@ -112,14 +112,14 @@ export async function getStaticPaths() {
         conservation: 'Conservée dans des pots en céramique spéciaux'
       },
       nutrition: 'Sans additifs artificiels, 100% naturel',
-      pairings: ['Toutes les frites', 'Indo Peanut', 'Classic Fries']
+      pairings: ['TOUTES LES FRITES', 'ARACHIDES INDONÉSIENNES', 'FRITES CLASSIQUES']
     },
     {
       slug: 'truffle',
-      name: 'TRUFFLE',
+      name: 'MAYONNAISE À LA TRUFFE',
       category: 'sauce',
       image: 'https://www.luxfries.com/assets/images/luxfries-2-115329-360x_.jpg',
-      description: 'Une sauce luxueuse à la truffe noire qui élève vos frites à un niveau supérieur. L\'arôme intense et terreux de la truffe se marie parfaitement avec la saveur naturelle de nos pommes de terre belges pour une expérience gastronomique inoubliable.',
+      description: 'Une sauce luxueuse à la truffe noire qui élève vos frites à un niveau supérieur. L\'arôme intense et terreux de la truffe se marie parfaitement avec la saveur naturelle de nos pommes de terre marocaines pour une expérience gastronomique inoubliable.',
       details: {
         type: 'Sauce premium',
         preparation: 'Infusée à la truffe noire',
@@ -129,14 +129,14 @@ export async function getStaticPaths() {
         conservation: 'Conservée dans des pots en céramique spéciaux'
       },
       nutrition: '100% ingrédients naturels de qualité',
-      pairings: ['Parmesan & Basil', 'Indo Peanut', 'Frites classiques']
+      pairings: ['PARMESAN ET BASILIC', 'ARACHIDES INDONÉSIENNES', 'FRITES CLASSIQUES']
     },
     {
       slug: 'andalouse',
       name: 'ANDALOUSE',
       category: 'sauce',
       image: 'https://www.luxfries.com/assets/images/luxfries-1-115329-360x_.jpg',
-      description: 'La sauce incontournable aux saveurs méditerranéennes. Une combinaison parfaite de poivrons rouges grillés, de tomates et d\'épices douces qui apporte une touche de fraîcheur et de légèreté à vos frites. La préférée de beaucoup de nos clients.',
+      description: 'La sauce incontournable aux saveurs méditerranéennes, préparée à Casablanca. Une combinaison parfaite de poivrons rouges grillés, de tomates et d\'épices douces qui apporte une touche de fraîcheur et de légèreté à vos frites. La préférée de beaucoup de nos clients.',
       details: {
         type: 'Sauce méditerranéenne',
         preparation: 'Mélange de légumes grillés',
@@ -145,15 +145,15 @@ export async function getStaticPaths() {
         origin: 'Inspiration espagnole authentique',
         conservation: 'Conservée dans des pots en céramique spéciaux'
       },
-      nutrition: 'Faible en calories, 100% naturel',
-      pairings: ['Toutes les frites', 'Spicy Royal Rendang', 'Veggie Chili']
-    },
-    {
+       nutrition: 'Faible en calories, 100% naturel',
+       pairings: ['TOUTES LES FRITES', 'RENDANG ROYAL ÉPICÉ', 'CHILI VÉGÉTARIEN AU FROMAGE']
+     },
+     {
       slug: 'bearnaise',
-      name: 'BEARNAISE',
+      name: 'BÉARNAISE',
       category: 'sauce',
       image: 'https://www.luxfries.com/assets/images/luxfries-3-115425-360x360.jpg',
-      description: 'Une sauce riche et élégante à la française, préparée avec du vinaigre de vin blanc, des échalotes et des herbes fraîches. Une saveur acidulée et herbacée qui rehausse magnifiquement le goût de nos pommes de terre belges. Parfaite pour les amateurs de saveurs raffinées.',
+      description: 'Une sauce riche et élégante à la française, préparée avec du vinaigre de vin blanc, des échalotes et des herbes fraîches. Une saveur acidulée et herbacée qui rehausse magnifiquement le goût de nos pommes de terre marocaines. Parfaite pour les amateurs de saveurs raffinées.',
       details: {
         type: 'Sauce gastronomique',
         preparation: 'Émulsionnée à froid',
@@ -163,24 +163,24 @@ export async function getStaticPaths() {
         conservation: 'Conservée dans des pots en céramique spéciaux'
       },
       nutrition: 'Sans additifs, ingrédients frais',
-      pairings: ['Indo Peanut', 'Veggie Chili', 'Steak Fries']
+      pairings: ['ARACHIDES INDONÉSIENNES', 'CHILI VÉGÉTARIEN AU FROMAGE', 'RENDANG ROYAL ÉPICÉ']
     },
     {
       slug: 'basil-mayo',
-      name: 'BASIL MAYO',
+      name: 'MAYONNAISE AU BASILIC',
       category: 'sauce',
       image: 'https://www.luxfries.com/assets/images/luxfries-2-115424-360x360.jpg',
-      description: 'Une mayonnaise maison rehaussée de basilic frais, apportant une note herbacée et rafraîchissante. L\'équilibre parfait entre la richesse crémeuse de la mayonnaise et la vivacité du basilic frais. Idéale pour l\'été ou pour apporter une touche de légèreté à vos repas.',
+      description: 'Une mayonnaise maison rehaussée de basilic frais, apportant une note herbacée et rafraîchissante, préparée à Casablanca. L\'équilibre parfait entre la richesse crémeuse de la mayonnaise et la vivacité du basilic frais. Idéale pour l\'été ou pour apporter une touche de légèreté à vos repas.',
       details: {
         type: 'Sauce fraîche',
         preparation: 'Fabriquée avec du basilic frais',
-        ingredients: 'Base mayonnaise, basilic frais, huile d\'olive, sel, poivre',
+        ingredients: 'Base mayonnaise (œufs, huile de colza, vinaigre, moutarde), basilic frais, huile d\'olive, sel, poivre',
         allergens: 'Contient ŒUF',
         origin: 'Herbes fraîches locales',
         conservation: 'Conservée dans des pots en céramique spéciaux'
       },
       nutrition: '100% naturel, herbes fraîches',
-      pairings: ['Toutes les frites', 'Veggie Chili', 'Parmesan & Basil']
+      pairings: ['TOUTES LES FRITES', 'CHILI VÉGÉTARIEN AU FROMAGE', 'PARMESAN ET BASILIC']
     }
   ];
 
